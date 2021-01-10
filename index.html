@@ -112,7 +112,182 @@
         <section class="content">
           <section class="vanilla">
             <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
-            <section class="funcionality" id="vanilla-event__4"></section>
+            <section class="funcionality" id="vanilla-event__4">
+              Press a keyboard key.
+            </section>
+            <section class="code">
+              <code class="code-content">
+                document.addEventListener("keypress", function(e) {
+                  const content = document.getElementById("vanilla-event__4");
+                  content.innerHTML = `You have pressed ${e.code}.`;
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality" id="jquery-event__4">
+              Press a keyboard key.
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $(document).on("keypress", function(e) {
+                  $("#jquery-event__4").text(`You have pressed ${e.code}.`);
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="event-list__element">
+        <h3 class="event-list__element-title">User moves the mouse cursor:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality" id="vanilla-event__5">
+              Move the mouse cursor.
+            </section>
+            <section class="code">
+              <code class="code-content">
+                window.addEventListener("mousemove", function(e) {
+                  const content = document.getElementById("vanilla-event__5");
+                  content.innerHTML = `The mouse is in ${e.clientX}x and ${e.clientY}y position.`
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality" id="jquery-event__5">
+              Move the mouse cursor.
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $(window).on("mousemove", function(e) {
+                  $("#jquery-event__5").text(`The mouse is in ${e.clientX}x and ${e.clientY}y position.`);
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="event-list__element">
+        <h3 class="event-list__element-title">User changes a value of an text input:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality">
+              <input type="text" id="vanilla-event__6">
+              <p id="vanilla-event__6-content">Change the input value.</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                const input1 = document.getElementById("vanilla-event__6");
+                input1.addEventListener("input", function() {
+                  const content = document.getElementById("vanilla-event__6-content");
+                  const value = input1.value;
+                  content.innerHTML = `The new value is ${value}.`
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality">
+              <input type="text" id="jquery-event__6">
+              <p id="jquery-event__6-content">Change the input value.</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $("#jquery-event__6").on("input", function() {
+                  $("#jquery-event__6-content").text(`The new value is ${$(this).val()}.`)
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="event-list__element">
+        <h3 class="event-list__element-title">An image is loaded:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality" id="vanilla-event__7">
+              <img src="https://media.giphy.com/media/gx54W1mSpeYMg/giphy.gif" alt="GIF" id="vanilla-event__7-content">
+            </section>
+            <section class="code">
+              <code class="code-content">
+                const img1 = document.getElementById("vanilla-event__7-content");
+                img1.addEventListener("load", function() {
+                  const section = document.getElementById("vanilla-event__7");
+                  section.insertAdjacentHTML("beforeend", `&lt;p&gt;The img has been loaded&lt;/p&gt;`)
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality" id="jquery-event__7">
+              <img src="https://media.giphy.com/media/gx54W1mSpeYMg/giphy.gif" alt="GIF" id="jquery-event__7-content">
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $("#jquery-event__7-content").on("load", function() {
+                  $("#jquery-event__7").append(`&lt;p&gt;The img has been loaded&lt;/p&gt;`);
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="event-list__element">
+        <h3 class="event-list__element-title">An image fails to load:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality" id="vanilla-event__8">
+              <img src="https://media.giphy.com/meia/gx54W1mSpeYMg/giphy.gif" alt="GIF" id="vanilla-event__8-content">
+            </section>
+            <section class="code">
+              <code class="code-content">
+                const img2 = document.getElementById("vanilla-event__8-content");
+                img2.addEventListener("error", function() {
+                  const section = document.getElementById("vanilla-event__8");
+                  section.insertAdjacentHTML("beforeend", `&lt;p&gt;The img can not loaded.&lt;/p&gt;`)
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality" id="jquery-event__8">
+              <img src="https://media.giphy.com/meia/gx54W1mSpeYMg/giphy.gif" alt="GIF" id="jquery-event__8-content">
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $("#jquery-event__8-content").on("error", function() {
+                  $("#jquery-event__8").append(`&lt;p&gt;The img can not loaded.&lt;/p&gt;`);
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="event-list__element">
+        form is submitted
+        <h3 class="event-list__element-title">A form is submitted:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality" id="vanilla-event__9">
+              <form id="vanilla-event__9-content">
+                <label for="">Firs name:</label>
+                <input type="text">
+                <label for="">Last name:</label>
+                <input type="text">
+                <input type="submit">
+              </form>
+            </section>
             <section class="code">
               <code class="code-content">
                 
@@ -121,7 +296,9 @@
           </section>
           <section class="jquery">
             <h4 class="jquery-title">jQuery:</h4>
-            <section class="funcionality" id="jquery-event__4"></section>
+            <section class="funcionality" id="jquery-event__9">
+              
+            </section>
             <section class="code">
               <code class="code-content">
                 
@@ -130,11 +307,6 @@
           </section>
         </section>
       </li>
-      <li class="event-list__element"></li>
-      <li class="event-list__element"></li>
-      <li class="event-list__element"></li>
-      <li class="event-list__element"></li>
-      <li class="event-list__element"></li>
       <li class="event-list__element"></li>
       <li class="event-list__element"></li>
       <li class="event-list__element"></li>
