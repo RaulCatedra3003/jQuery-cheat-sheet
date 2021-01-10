@@ -51,3 +51,44 @@ img2.addEventListener("error", function() {
   const section = document.getElementById("vanilla-event__8");
   section.insertAdjacentHTML("beforeend", `<p>The img can not loaded.</p>`)
 })
+
+/* A form is submitted */
+const form1 = document.getElementById("vanilla-event__9-content");
+form1.addEventListener("submit", function(e) {
+  e.preventDefault();
+  const section = document.getElementById("vanilla-event__9");
+  section.insertAdjacentHTML("beforeend", `<p>The fomr has been submited.</p>`);
+});
+
+/* User changes the option of a select element */
+const select1 = document.getElementById("vanilla-event__10-content");
+select1.addEventListener("change", function() {
+  const section = document.getElementById("vanilla-event__10");
+  section.insertAdjacentHTML("beforeend", `<p>You have selected an option.</p>`);
+})
+
+/* User position the mouse over an element */
+const section = document.getElementById("vanilla-event__11");
+section.addEventListener("mouseover", function(e) {
+  this.style.color = "red";
+})
+
+/* Checkbox is checked or unchecked */
+const checkbox = document.getElementById("vanilla-event__12");
+checkbox.addEventListener("click", function() {
+  const section = document.getElementById("vanilla-event__12-content");
+  if(checkbox.checked === true) {
+    section.textContent = `The checkbox is checked.`
+  } else {
+    section.textContent = `The checkbox is not checked.`
+  }
+})
+
+/* Click in a ul list element */
+const lis = document.querySelectorAll(".vanilla-event__13");
+lis.forEach(e => {
+  e.addEventListener("click", function() {
+    const content = document.getElementById("vanilla-event__13-content");
+    content.textContent = `You have clicked in the ${this.textContent} element.`
+  });
+})

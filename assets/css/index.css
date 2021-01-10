@@ -58,7 +58,7 @@ body{
   padding: 15px 0;
 }
 .events-title{
-  font-size: 1.5em;
+  font-size: 1.7em;
   font-weight: bold;
   text-align: left;
   padding: 10px;
@@ -121,4 +121,31 @@ img{
 form{
   display: flex;
   flex-direction: column;
+}
+select{
+  margin: 10px 0;
+}
+.example-ul{
+  margin: 10px 20px;
+  list-style: circle;
+}
+.vanilla-event__13{
+  margin: 5px 0;
+}
+.jquery-event__13{
+  margin: 5px 0;
+}
+.functions-title{
+  font-size: 1.7em;
+  font-weight: bold;
+  text-align: left;
+  padding: 10px;
+  margin: 40px 0;
+}
+.functions-list__element-title{
+  font-size: 1.3em;
+  font-weight: bold;
+  text-align: left;
+  padding: 10px 0;
+  margin: 20px 30px;
 }

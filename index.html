@@ -274,7 +274,6 @@
         </section>
       </li>
       <li class="event-list__element">
-        form is submitted
         <h3 class="event-list__element-title">A form is submitted:</h3>
         <section class="content">
           <section class="vanilla">
@@ -290,15 +289,220 @@
             </section>
             <section class="code">
               <code class="code-content">
-                
+                const form1 = document.getElementById("vanilla-event__9-content");
+                form1.addEventListener("submit", function() {
+                  const section = document.getElementById("vanilla-event__9");
+                  section.insertAdjacentHTML("beforeend", `&lt;p&gt;The fomr has been submited.&lt;/p&gt;`);
+                }
             </code>
             </section>
           </section>
           <section class="jquery">
             <h4 class="jquery-title">jQuery:</h4>
             <section class="funcionality" id="jquery-event__9">
-              
+              <form id="jquery-event__9-content">
+                <label for="">Firs name:</label>
+                <input type="text">
+                <label for="">Last name:</label>
+                <input type="text">
+                <input type="submit">
+              </form>
             </section>
+            <section class="code">
+              <code class="code-content">
+                $("#jquery-event__9-content").on("submit", function(e) {
+                  e.preventDefault();
+                  $("#jquery-event__9").append(`&lt;p&gt;The fomr has been submited.&lt;/p&gt;`);
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="event-list__element">
+        <h3 class="event-list__element-title">User changes the option of a select element:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality" id="vanilla-event__10">
+              <select name="" id="vanilla-event__10-content">
+                <option value="none">Select a option.</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                const select1 = document.getElementById("vanilla-event__10-content");
+                select1.addEventListener("change", function() {
+                  const section = document.getElementById("vanilla-event__10");
+                  section.insertAdjacentHTML("beforeend", `&lt;p&gt;You have selected an option.&lt;/p&gt;`);
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality" id="jquery-event__10">
+              <select name="" id="jquery-event__10-content">
+                <option value="none">Select a option.</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $("#jquery-event__10-content").on("change", function() {
+                  $("#jquery-event__10").append(`&lt;p&gt;You have selected an option.&lt;/p&gt;`);
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="event-list__element">
+        <h3 class="event-list__element-title">User position the mouse over an element:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality" id="vanilla-event__11">
+              Put the mouse over this text.
+            </section>
+            <section class="code">
+              <code class="code-content">
+                const section = document.getElementById("vanilla-event__11");
+                section.addEventListener("mouseover", function(e) {
+                  this.style.color = "red";
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality" id="jquery-event__11">
+              Put the mouse over this text.
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $("#jquery-event__11").on("mouseover", function() {
+                  $(this).css("color", "red");
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="event-list__element">
+        <h3 class="event-list__element-title">Checkbox is checked or unchecked:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality">
+              <input type="checkbox" id="vanilla-event__12">
+              <p id="vanilla-event__12-content">The checkbox is not checked.</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                const checkbox = document.getElementById("vanilla-event__12");
+                checkbox.addEventListener("click", function() {
+                  const section = document.getElementById("vanilla-event__12-content");
+                  if(checkbox.checked === true) {
+                    section.textContent = `The checkbox is checked.`
+                  } else {
+                    section.textContent = `The checkbox is not checked.`
+                  }
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality">
+              <input type="checkbox" id="jquery-event__12">
+              <p id="jquery-event__12-content">The checkbox is not checked.</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $("#jquery-event__12").on("click", function() {
+                  if($("#jquery-event__12").is(":checked")) {
+                    console.log("aqui");
+                    $("#jquery-event__12-content").text("The checkbox is checked.");
+                  } else {
+                    $("#jquery-event__12-content").text("The checkbox is not checked.");
+                  }
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="event-list__element">
+        <h3 class="event-list__element-title">Click in a ul list element:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality">
+              <ul class="example-ul">
+                <li class="vanilla-event__13">First</li>
+                <li class="vanilla-event__13">Second</li>
+                <li class="vanilla-event__13">Third</li>
+              </ul>
+              <p id="vanilla-event__13-content">Click in a list element.</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                const lis = document.querySelectorAll(".vanilla-event__13");
+                lis.forEach(e => {
+                  e.addEventListener("click", function() {
+                    const content = document.getElementById("vanilla-event__13-content");
+                    content.textContent = `You have clicked in the ${this.textContent} element.`
+                  });
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality">
+              <ul class="example-ul">
+                <li class="jquery-event__13">First</li>
+                <li class="jquery-event__13">Second</li>
+                <li class="jquery-event__13">Third</li>
+              </ul>
+              <p id="jquery-event__13-content">Click in a list element.</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $(".jquery-event__13").on("click", function() {
+                  $("#jquery-event__13-content").text(`You have clicked in the ${$(this).text()} element.`)
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="functions">
+    <h2 class="functions-title">Functions and Selectors:</h2>
+    <ul class="functions-list">
+      <li class="functions-list__element">
+        <h3 class="functions-list__element-title">El Título va aqui!</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality" id="vanilla-functions__1"></section>
+            <section class="code">
+              <code class="code-content">
+                
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality" id="jquery-functions__1"></section>
             <section class="code">
               <code class="code-content">
                 
@@ -307,16 +511,6 @@
           </section>
         </section>
       </li>
-      <li class="event-list__element"></li>
-      <li class="event-list__element"></li>
-      <li class="event-list__element"></li>
-      <li class="event-list__element"></li>
-    </ul>
-  </section>
-  <section class="functions">
-    <h2 class="functions-title">Functions and Selectors</h2>
-    <ul class="functions-list">
-      <li class="functions-list__element"></li>
       <li class="functions-list__element"></li>
       <li class="functions-list__element"></li>
       <li class="functions-list__element"></li>
