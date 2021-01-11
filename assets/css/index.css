@@ -149,3 +149,15 @@ select{
   padding: 10px 0;
   margin: 20px 30px;
 }
+.red{
+  color: red;
+}
+.hidde{
+  display: none;
+}
+a{
+  display: block;
+}
+.functions{
+  margin-bottom: 20px;
+}

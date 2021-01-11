@@ -57,7 +57,6 @@ $("#jquery-event__11").on("mouseover", function() {
 /* Checkbox is checked or unchecked */
 $("#jquery-event__12").on("click", function() {
   if($("#jquery-event__12").is(":checked")) {
-    console.log("aqui");
     $("#jquery-event__12-content").text("The checkbox is checked.");
   } else {
     $("#jquery-event__12-content").text("The checkbox is not checked.");

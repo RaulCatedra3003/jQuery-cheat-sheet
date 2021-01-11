@@ -427,7 +427,6 @@
               <code class="code-content">
                 $("#jquery-event__12").on("click", function() {
                   if($("#jquery-event__12").is(":checked")) {
-                    console.log("aqui");
                     $("#jquery-event__12-content").text("The checkbox is checked.");
                   } else {
                     $("#jquery-event__12-content").text("The checkbox is not checked.");
@@ -489,55 +488,1088 @@
     <h2 class="functions-title">Functions and Selectors:</h2>
     <ul class="functions-list">
       <li class="functions-list__element">
-        <h3 class="functions-list__element-title">El Título va aqui!</h3>
+        <h3 class="functions-list__element-title">Create an HTML element:</h3>
         <section class="content">
           <section class="vanilla">
             <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
-            <section class="funcionality" id="vanilla-functions__1"></section>
+            <section class="funcionality" id="vanilla-functions__1">
+              <button id="vanilla-functions__1-button">Click me!</button>
+            </section>
             <section class="code">
               <code class="code-content">
-                
+                const button3 = document.getElementById("vanilla-functions__1-button");
+                button3.addEventListener("click", function() {
+                  const section = document.getElementById("vanilla-functions__1");
+                  const p = document.createElement("p");
+                  p.textContent = "Hi!"
+                  section.insertAdjacentElement("beforeend", p);
+                })
             </code>
             </section>
           </section>
           <section class="jquery">
             <h4 class="jquery-title">jQuery:</h4>
-            <section class="funcionality" id="jquery-functions__1"></section>
+            <section class="funcionality" id="jquery-functions__1">
+              <button id="jquery-functions__1-button">Click me!</button>
+            </section>
             <section class="code">
               <code class="code-content">
-                
+                $("#jquery-functions__1-button").on("click", function() {
+                  $("&lt;p&gt;Hi!&lt;/p&gt;").appendTo($("#jquery-functions__1"))
+                })
               </code>
             </section>
           </section>
         </section>
       </li>
-      <li class="functions-list__element"></li>
-      <li class="functions-list__element"></li>
-      <li class="functions-list__element"></li>
-      <li class="functions-list__element"></li>
-      <li class="functions-list__element"></li>
-      <li class="functions-list__element"></li>
-      <li class="functions-list__element"></li>
-      <li class="functions-list__element"></li>
-      <li class="functions-list__element"></li>
-      <li class="functions-list__element"></li>
-      <li class="functions-list__element"></li>
-      <li class="functions-list__element"></li>
-      <li class="functions-list__element"></li>
-      <li class="functions-list__element"></li>
-      <li class="functions-list__element"></li>
-      <li class="functions-list__element"></li>
-      <li class="functions-list__element"></li>
-      <li class="functions-list__element"></li>
-      <li class="functions-list__element"></li>
-      <li class="functions-list__element"></li>
-      <li class="functions-list__element"></li>
-      <li class="functions-list__element"></li>
-      <li class="functions-list__element"></li>
-      <li class="functions-list__element"></li>
-      <li class="functions-list__element"></li>
-      <li class="functions-list__element"></li>
-      <li class="functions-list__element"></li>
+      <li class="functions-list__element">
+        <h3 class="functions-list__element-title">Remove an HTML element:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality" id="vanilla-functions__2">
+              <button id="vanilla-functions__2-button">Click me!</button>
+              <p id="vanilla-functions__2-content">Hi!</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                const button4 = document.getElementById("vanilla-functions__2-button");
+                button4.addEventListener("click", function() {
+                  const section = document.getElementById("vanilla-functions__2-content");
+                  section.remove();
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality" id="jquery-functions__2">
+              <button id="jquery-functions__2-button">Click me!</button>
+              <p id="jquery-functions__2-content">Hi!</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $("#jquery-functions__2-button").on("click", function() {
+                  $("#jquery-functions__2-content").remove();
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="functions-list__element">
+        <h3 class="functions-list__element-title">Append an HTML element to a parent element:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality" id="vanilla-functions__3">
+              <button id="vanilla-functions__3-button">Click me!</button>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                const button5 = document.getElementById("vanilla-functions__3-button");
+                button5.addEventListener("click", function() {
+                  const section = document.getElementById("vanilla-functions__3");
+                  const p = document.createElement("p");
+                  p.textContent = "Child"
+                  section.insertAdjacentElement("beforeend", p);
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality" id="jquery-functions__3">
+              <button id="jquery-functions__3-button">Click me!</button>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $("#jquery-functions__3-button").on("click", function() {
+                  $("&lt;p&gt;Child&lt;/p&gt;").appendTo($("#jquery-functions__3"))
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="functions-list__element">
+        <h3 class="functions-list__element-title">Prepend an HTML element to a parent element:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality" id="vanilla-functions__4">
+              <button id="vanilla-functions__4-button">Click me!</button>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                const button6 = document.getElementById("vanilla-functions__4-button");
+                button6.addEventListener("click", function() {
+                  const section = document.getElementById("vanilla-functions__4");
+                  const p = document.createElement("p");
+                  p.textContent = "Child"
+                  section.insertBefore(p, button6);
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality" id="jquery-functions__4">
+              <button id="jquery-functions__4-button">Click me!</button>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $("#jquery-functions__4-button").on("click", function() {
+                  $("#jquery-functions__4").prepend($("&lt;p&gt;Child&lt;/p&gt;"))
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="functions-list__element">
+        <h3 class="functions-list__element-title">Create and add an HTML elemen after another element:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality" id="vanilla-functions__5">
+              <button id="vanilla-functions__5-button">Click me!</button>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                const button7 = document.getElementById("vanilla-functions__5-button");
+                button7.addEventListener("click", function() {
+                  const p = document.createElement("p");
+                  p.textContent = "Child"
+                  button7.parentNode.insertBefore(p, button7.nextSibling);
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality" id="jquery-functions__5">
+              <button id="jquery-functions__5-button">Click me!</button>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $("#jquery-functions__5-button").on("click", function() {
+                  $(this).after("&lt;p&gt;Child&lt;/p&gt;");
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="functions-list__element">
+        <h3 class="functions-list__element-title">Create and add an HTML elemen before another element:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality" id="vanilla-functions__6">
+              <button id="vanilla-functions__6-button">Click me!</button>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                const button8 = document.getElementById("vanilla-functions__6-button");
+                button8.addEventListener("click", function() {
+                  const p = document.createElement("p");
+                  p.textContent = "Child"
+                  button8.parentNode.insertBefore(p, button8);
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality" id="jquery-functions__6">
+              <button id="jquery-functions__6-button">Click me!</button>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $("#jquery-functions__6-button").on("click", function() {
+                  $(this).before("&lt;p&gt;Child&lt;/p&gt;");
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="functions-list__element">
+        <h3 class="functions-list__element-title">Clone an HTML element within other element:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality" id="vanilla-functions__7">
+              <button id="vanilla-functions__7-button">Click me!</button>
+              <p id="vanilla-functions__7-content">Element to clone</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                const button9 = document.getElementById("vanilla-functions__7-button");
+                button9.addEventListener("click", function() {
+                  const section = document.getElementById("vanilla-functions__7");
+                  const clone = document.getElementById("vanilla-functions__7-content").cloneNode(true);
+                  clone.setAttribute("id", "");
+                  clone.textContent = "Cloned element";
+                  section.insertAdjacentElement("beforeend", clone);
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality" id="jquery-functions__7">
+              <button id="jquery-functions__7-button">Click me!</button>
+              <p id="jquery-functions__7-content">Element to clone</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $("#jquery-functions__7-button").on("click", function() {
+                  const cloneElement = $("#jquery-functions__7-content").clone()
+                  cloneElement.attr("id", "");
+                  cloneElement.text("Cloned element")
+                  cloneElement.appendTo($("#jquery-functions__7"))
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="functions-list__element">
+        <h3 class="functions-list__element-title">Add a class to an HTML element:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality" id="vanilla-functions__8">
+              <button id="vanilla-functions__8-button">Click me!</button>
+              <p id="vanilla-functions__8-content">Element to add class</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                const button10 = document.getElementById("vanilla-functions__8-button");
+                button10.addEventListener("click", function() {
+                  const p = document.getElementById("vanilla-functions__8-content");
+                  p.classList.add("red");
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality" id="jquery-functions__8">
+              <button id="jquery-functions__8-button">Click me!</button>
+              <p id="jquery-functions__8-content">Element to add class</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $("#jquery-functions__8-button").on("click", function() {
+                  $("#jquery-functions__8-content").addClass("red");
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="functions-list__element">
+        <h3 class="functions-list__element-title">Remove a class to an HTML element:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality" id="vanilla-functions__9">
+              <button id="vanilla-functions__9-button">Click me!</button>
+              <p id="vanilla-functions__9-content" class="red">Element to remove class</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                const button11 = document.getElementById("vanilla-functions__9-button");
+                button11.addEventListener("click", function() {
+                  const p = document.getElementById("vanilla-functions__9-content");
+                  p.classList.remove("red");
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality" id="jquery-functions__9">
+              <button id="jquery-functions__9-button">Click me!</button>
+              <p id="jquery-functions__9-content" class="red">Element to remove class</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $("#jquery-functions__9-button").on("click", function() {
+                  $("#jquery-functions__9-content").removeClass("red");
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="functions-list__element">
+        <h3 class="functions-list__element-title">Toggle a class of an HTML element:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality" id="vanilla-functions__10">
+              <button id="vanilla-functions__10-button">Click me!</button>
+              <p id="vanilla-functions__10-content" class="hidde">Element to toggle class</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                const button12 = document.getElementById("vanilla-functions__10-button");
+                button12.addEventListener("click", function() {
+                  const p = document.getElementById("vanilla-functions__10-content");
+                  p.classList.toggle("hidde");
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality" id="jquery-functions__10">
+              <button id="jquery-functions__10-button">Click me!</button>
+              <p id="jquery-functions__10-content" class="hidde">Element to toggle class</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $("#jquery-functions__10-button").on("click", function() {
+                  $("#jquery-functions__10-content").toggleClass("hidde");
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="functions-list__element">
+        <h3 class="functions-list__element-title">Add a disabled attribute to an HTML button:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality" id="vanilla-functions__11">
+              <button id="vanilla-functions__11-button">Click me!</button>
+              <button id="vanilla-functions__11-content">Button to add disabled attribute</button>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                const button13 = document.getElementById("vanilla-functions__11-button");
+                button13.addEventListener("click", function() {
+                  const content = document.getElementById("vanilla-functions__11-content");
+                  content.disabled = true;
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality" id="jquery-functions__11">
+              <button id="jquery-functions__11-button">Click me!</button>
+              <button id="jquery-functions__11-content">Button to add disabled attribute</button>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $("#jquery-functions__11-button").on("click", function() {
+                  $("#jquery-functions__11-content").prop("disabled", true);
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="functions-list__element">
+        <h3 class="functions-list__element-title">Remove the disabled attribute to an HTML button:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality" id="vanilla-functions__12">
+              <button id="vanilla-functions__12-button">Click me!</button>
+              <button id="vanilla-functions__12-content" disabled>Button to remove disabled attribute</button>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                const button14 = document.getElementById("vanilla-functions__12-button");
+                button14.addEventListener("click", function() {
+                  const content = document.getElementById("vanilla-functions__12-content");
+                  content.disabled = false;
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality" id="jquery-functions__12">
+              <button id="jquery-functions__12-button">Click me!</button>
+              <button id="jquery-functions__12-content" disabled>Button to remove disabled attribute</button>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $("#jquery-functions__12-button").on("click", function() {
+                  $("#jquery-functions__12-content").prop("disabled", false);
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="functions-list__element">
+        <h3 class="functions-list__element-title">Set a data-src attribute to a img element:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality" id="vanilla-functions__13">
+              <button id="vanilla-functions__13-button">Click me!</button>
+              <img src="" alt="GIF" id="vanilla-functions__13-content">
+            </section>
+            <section class="code">
+              <code class="code-content">
+                const button15 = document.getElementById("vanilla-functions__13-button");
+                button15.addEventListener("click", function() {
+                  const content = document.getElementById("vanilla-functions__13-content");
+                  content.setAttribute("src", "https://media.giphy.com/media/gx54W1mSpeYMg/giphy.gif");
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality" id="jquery-functions__13">
+              <button id="jquery-functions__13-button">Click me!</button>
+              <img src="" alt="GIF" id="jquery-functions__13-content">
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $("#jquery-functions__13-button").on("click", function() {
+                  $("#jquery-functions__13-content").attr("src", "https://media.giphy.com/media/gx54W1mSpeYMg/giphy.gif");
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="functions-list__element">
+        <h3 class="functions-list__element-title">Remove a data-src attribute to a img element:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality" id="vanilla-functions__14">
+              <button id="vanilla-functions__14-button">Click me!</button>
+              <img src="https://media.giphy.com/media/gx54W1mSpeYMg/giphy.gif" alt="GIF" id="vanilla-functions__14-content">
+            </section>
+            <section class="code">
+              <code class="code-content">
+                const button16 = document.getElementById("vanilla-functions__14-button");
+                button16.addEventListener("click", function() {
+                  const content = document.getElementById("vanilla-functions__14-content");
+                  content.removeAttribute("src");
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality" id="jquery-functions__14">
+              <button id="jquery-functions__14-button">Click me!</button>
+              <img src="https://media.giphy.com/media/gx54W1mSpeYMg/giphy.gif" alt="GIF" id="jquery-functions__14-content">
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $("#jquery-functions__14-button").on("click", function() {
+                  $("#jquery-functions__14-content").removeAttr("src");
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="functions-list__element">
+        <h3 class="functions-list__element-title">Hide an HTML element on click:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality" id="vanilla-functions__15">
+              <button id="vanilla-functions__15-button">Click me!</button>
+              <p id="vanilla-functions__15-content">Element to hide</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                const button17 = document.getElementById("vanilla-functions__15-button");
+                button17.addEventListener("click", function() {
+                  const content = document.getElementById("vanilla-functions__15-content");
+                  content.style.display = "none";
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality" id="jquery-functions__15">
+              <button id="jquery-functions__15-button">Click me!</button>
+              <p id="jquery-functions__15-content">Element to hide</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $("#jquery-functions__15-button").on("click", function() {
+                  $("#jquery-functions__15-content").css("display", "none");
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="functions-list__element">
+        <h3 class="functions-list__element-title">Show an HTML element on click:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality" id="vanilla-functions__16">
+              <button id="vanilla-functions__16-button">Click me!</button>
+              <p id="vanilla-functions__16-content" style="display: none;">Element to show</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                const button18 = document.getElementById("vanilla-functions__16-button");
+                button18.addEventListener("click", function() {
+                  const content = document.getElementById("vanilla-functions__16-content");
+                  content.style.display = "block";
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality" id="jquery-functions__16">
+              <button id="jquery-functions__16-button">Click me!</button>
+              <p id="jquery-functions__16-content" style="display: none;">Element to show</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $("#jquery-functions__16-button").on("click", function() {
+                  $("#jquery-functions__16-content").css("display", "block");
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="functions-list__element">
+        <h3 class="functions-list__element-title">Fade in an HTML element:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality" id="vanilla-functions__17">
+              <button id="vanilla-functions__17-button">Click me!</button>
+              <p id="vanilla-functions__17-content" style="display: none;">Element to fade in</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                const button19 = document.getElementById("vanilla-functions__17-button");
+                button19.addEventListener("click", function() {
+                  const content = document.getElementById("vanilla-functions__17-content");
+                  content.style.opacity = 0;
+                  fadeIn(content);
+                  function fadeIn(element) {
+                    element.style.display = "block";
+                    (function fade() {
+                      let val = parseFloat(element.style.opacity);
+                      if(!((val += 0.1) > 1)) {
+                        element.style.opacity = val;
+                        requestAnimationFrame(fade);
+                      }
+                    })();
+                  }
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality" id="jquery-functions__17">
+              <button id="jquery-functions__17-button">Click me!</button>
+              <p id="jquery-functions__17-content" style="display: none;">Element to fade in</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $("#jquery-functions__17-button").on("click", function() {
+                  $("#jquery-functions__17-content").fadeIn();
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="functions-list__element">
+        <h3 class="functions-list__element-title">Fade out an HTML element:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality" id="vanilla-functions__18">
+              <button id="vanilla-functions__18-button">Click me!</button>
+              <p id="vanilla-functions__18-content">Element to fade out</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                const button20 = document.getElementById("vanilla-functions__18-button");
+                button20.addEventListener("click", function() {
+                  const content = document.getElementById("vanilla-functions__18-content");
+                  content.style.opacity = 1;
+                  fadeOut(content);
+                  content.style.display = "none";
+                  function fadeOut(element) {
+                    (function fade() {
+                      let val = parseFloat(element.style.opacity);
+                      if(!((val -= 0.1) > 1)) {
+                        element.style.opacity = val;
+                        requestAnimationFrame(fade);
+                      }
+                    })();
+                  }
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality" id="jquery-functions__18">
+              <button id="jquery-functions__18-button">Click me!</button>
+              <p id="jquery-functions__18-content">Element to fade out</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $("#jquery-functions__18-button").on("click", function() {
+                  $("#jquery-functions__18-content").fadeOut();
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="functions-list__element">
+        <h3 class="functions-list__element-title">Iterate a collection of elements and apply a change of style on them:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality" id="vanilla-functions__19">
+              <button id="vanilla-functions__19-button">Click me!</button>
+              <p class="vanilla-functions__19-content">Collection element</p>
+              <p class="vanilla-functions__19-content">Collection element</p>
+              <p class="vanilla-functions__19-content">Collection element</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                const button21 = document.getElementById("vanilla-functions__19-button");
+                button21.addEventListener("click", function() {
+                  const content = document.querySelectorAll(".vanilla-functions__19-content");
+                  content.forEach(el => {
+                    el.style.color = "blue";
+                  })
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality" id="jquery-functions__19">
+              <button id="jquery-functions__19-button">Click me!</button>
+              <p class="jquery-functions__19-content">Collection element</p>
+              <p class="jquery-functions__19-content">Collection element</p>
+              <p class="jquery-functions__19-content">Collection element</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $("#jquery-functions__19-button").on("click", function() {
+                  $(".jquery-functions__19-content").each(function() {
+                    $(this).css("color", "blue")
+                  })
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="functions-list__element">
+        <h3 class="functions-list__element-title">Get the parent element of a certain element:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality" id="vanilla-functions__20">
+              <button id="vanilla-functions__20-button">Click me!</button>
+              Hi!
+            </section>
+            <section class="code">
+              <code class="code-content">
+                const button22 = document.getElementById("vanilla-functions__20-button");
+                button22.addEventListener("click", function() {
+                  this.parentNode.style.fontWeight = "bold";
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality" id="jquery-functions__20">
+              <button id="jquery-functions__20-button">Click me!</button>
+              Hi!
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $("#jquery-functions__20-button").on("click", function() {
+                  $(this).parent().css("font-weight", "bold")
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="functions-list__element">
+        <h3 class="functions-list__element-title">Get the collection of children of a certain element:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality" id="vanilla-functions__21">
+              <button id="vanilla-functions__21-button">Click me!</button>
+              <p>Collection element</p>
+              <p>Collection element</p>
+              <p>Collection element</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                const button23 = document.getElementById("vanilla-functions__21-button");
+                button23.addEventListener("click", function() {
+                  let collection = this.parentNode.children;
+                  for(element of collection) {
+                    element.style.fontWeight = "bold";
+                  }
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality" id="jquery-functions__21">
+              <button id="jquery-functions__21-button">Click me!</button>
+              <p>Collection element</p>
+              <p>Collection element</p>
+              <p>Collection element</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $("#jquery-functions__21-button").on("click", function() {
+                  $("#jquery-functions__21").children().css("font-weight", "bold")
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="functions-list__element">
+        <h3 class="functions-list__element-title">Get all the elements that have a certain class:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality" id="vanilla-functions__22">
+              <button id="vanilla-functions__22-button">Click me!</button>
+              <p class="vanilla-certain">Collection element</p>
+              <p>Collection element</p>
+              <p class="certain1">Collection element</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                const button24 = document.getElementById("vanilla-functions__22-button");
+                button24.addEventListener("click", function() {
+                  const section = document.querySelector(".vanilla-certain");
+                  section.style.fontWeight = "bold";
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality" id="jquery-functions__22">
+              <button id="jquery-functions__22-button">Click me!</button>
+              <p class="jquery-certain">Collection element</p>
+              <p>Collection element</p>
+              <p class="certain1">Collection element</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $("#jquery-functions__22-button").on("click", function() {
+                  $(".jquery-certain").css("font-weight", "bold");
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="functions-list__element">
+        <h3 class="functions-list__element-title">Get an item by id:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality" id="vanilla-functions__23">
+              <button id="vanilla-functions__23-button">Click me!</button>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                const button25 = document.getElementById("vanilla-functions__23-button");
+                button25.addEventListener("click", function() {
+                  this.style.fontWeight = "bold";
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality" id="jquery-functions__23">
+              <button id="jquery-functions__23-button">Click me!</button>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $("#jquery-functions__23-button").on("click", function() {
+                  $(this).css("font-weight", "bold");
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="functions-list__element">
+        <h3 class="functions-list__element-title">Get all the elements that have a certain class and the display property of none:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality" id="vanilla-functions__24">
+              <button id="vanilla-functions__24-button">Click me!</button>
+              <p class="vanilla-certain" style="display: none;">Collection element</p>
+              <p class="vanilla-certain">Collection element</p>
+              <p class="vanilla-certain">Collection element</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                const button26 = document.getElementById("vanilla-functions__24-button");
+                button26.addEventListener("click", function() {
+                  const sections = document.querySelectorAll(".vanilla-certain");
+                  sections.forEach(el => {
+                    if(el.style.display === "none") {
+                      el.style.color = "blue";
+                      el.style.display = "block";
+                    }
+                  })
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality" id="jquery-functions__24">
+              <button id="jquery-functions__24-button">Click me!</button>
+              <p class="jquery-certain" style="display: none;">Collection element</p>
+              <p class="jquery-certain">Collection element</p>
+              <p class="jquery-certain">Collection element</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $("#jquery-functions__24-button").on("click", function() {
+                  $(".jquery-certain:hidden").css({"display": "block", "color": "blue"})
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="functions-list__element">
+        <h3 class="functions-list__element-title">Get the options of a select element that are selected:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality" id="vanilla-functions__25">
+              <button id="vanilla-functions__25-button">Click me!</button>
+              <select>
+                <option class="vanilla-option" value="default">Select an opcion an click the button</option>
+                <option class="vanilla-option" value="1">1</option>
+                <option class="vanilla-option" value="2">2</option>
+                <option class="vanilla-option" value="3">3</option>
+              </select>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                const button27 = document.getElementById("vanilla-functions__25-button");
+                button27.addEventListener("click", function() {
+                  const options = document.querySelectorAll(".vanilla-option");
+                  options.forEach(el => {
+                    if(el.selected) {
+                      const section = document.getElementById("vanilla-functions__25");
+                      section.insertAdjacentHTML("beforeend", `&lt;p&gt;The value of the selected element is: ${el.textContent}&lt;/p&gt;`)
+                    }
+                  })
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality" id="jquery-functions__25">
+              <button id="jquery-functions__25-button">Click me!</button>
+              <select>
+                <option class="jquery-option" value="default">Select an opcion an click the button</option>
+                <option class="jquery-option" value="1">1</option>
+                <option class="jquery-option" value="2">2</option>
+                <option class="jquery-option" value="3">3</option>
+              </select>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $("#jquery-functions__25-button").on("click", function() {
+                  $("#jquery-functions__25").append(`&lt;p&gt;The value of the selected element is: ${$(".jquery-option:selected").val()}&lt;/p&gt;`)
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="functions-list__element">
+        <h3 class="functions-list__element-title">Change the href attribute of the first &lt;a&gt; element:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality" id="vanilla-functions__26">
+              <button id="vanilla-functions__26-button">Click me!</button>
+              <a href="#" target="_blank">elment who change</a>
+              <a href="#" target="_blank">elment who didn't change</a>
+              <a href="#" target="_blank">elment who didn't change</a>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                const button28 = document.getElementById("vanilla-functions__26-button");
+                button28.addEventListener("click", function() {
+                  const link = document.querySelectorAll("#vanilla-functions__26 a");
+                  link[0].setAttribute("href", "https://www.google.es");
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality" id="jquery-functions__26">
+              <button id="jquery-functions__26-button">Click me!</button>
+              <a href="#" target="_blank">elment who change</a>
+              <a href="#" target="_blank">elment who didn't change</a>
+              <a href="#" target="_blank">elment who didn't change</a>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $("#jquery-functions__26-button").on("click", function() {
+                  $("#jquery-functions__26 a").first().attr("href", "https://www.google.es");
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="functions-list__element">
+        <h3 class="functions-list__element-title">Show an alert with the value of the first &lt;input&gt; of the page:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality" id="vanilla-functions__27">
+              <button id="vanilla-functions__27-button">Click me!</button>
+              <input type="text" id="vanilla-functions__27-input">
+            </section>
+            <section class="code">
+              <code class="code-content">
+                const button29 = document.getElementById("vanilla-functions__27-button");
+                button29.addEventListener("click", function() {
+                  const input = document.getElementById("vanilla-functions__27-input");
+                  alert(input.value);
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality" id="jquery-functions__27">
+              <button id="jquery-functions__27-button">Click me!</button>
+              <input type="text" id="jquery-functions__27-input">
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $("#jquery-functions__27-button").on("click", function() {
+                  alert($("#jquery-functions__27-input").val());
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="functions-list__element">
+        <h3 class="functions-list__element-title">Remove all items from a specific selector:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality" id="vanilla-functions__28">
+              <button id="vanilla-functions__28-button">Click me!</button>
+              <p>The button and this text are going to be deleted!</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                const button30 = document.getElementById("vanilla-functions__28-button");
+                button30.addEventListener("click", function() {
+                  const section = document.getElementById("vanilla-functions__28");
+                  const children = Array.from(section.children);
+                  children.forEach(el => {
+                    el.remove();
+                  })
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality" id="jquery-functions__28">
+              <button id="jquery-functions__28-button">Click me!</button>
+              <p>The button and this text are going to be deleted!</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $("#jquery-functions__28-button").on("click", function() {
+                  $("#jquery-functions__28").children().remove();
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
+      <li class="functions-list__element">
+        <h3 class="functions-list__element-title">Animate an item after 2 seconds from the initial page load:</h3>
+        <section class="content">
+          <section class="vanilla">
+            <h4 class="vanilla-title">Vanilla JavaScipt:</h4>
+            <section class="funcionality" id="vanilla-functions__29">
+              <p id="vanilla-functions__29-content">This text is going to be animated!</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                document.addEventListener("DOMContentLoaded", function() {
+                  const content = document.getElementById("vanilla-functions__29-content");
+                  content.animate({height: "50px", backgroundColor: "red"}, {delay: 2000, duration: 5000, fill: "forwards"})
+                })
+            </code>
+            </section>
+          </section>
+          <section class="jquery">
+            <h4 class="jquery-title">jQuery:</h4>
+            <section class="funcionality" id="jquery-functions__29">
+              <p id="jquery-functions__29-content" style="background-color: red;">This text is going to be animated!</p>
+            </section>
+            <section class="code">
+              <code class="code-content">
+                $(function() {
+                  $("#jquery-functions__29-content").delay(2000).animate({"height": "50px"}, 5000);
+                })
+              </code>
+            </section>
+          </section>
+        </section>
+      </li>
       <li class="functions-list__element"></li>
     </ul>
   </section>
