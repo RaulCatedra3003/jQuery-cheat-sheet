@@ -63,6 +63,9 @@ body{
   text-align: left;
   padding: 10px;
 }
+.events-title:hover{
+  cursor: pointer;
+}
 .event-list__element-title{
   font-size: 1.3em;
   font-weight: bold;
@@ -141,6 +144,9 @@ select{
   text-align: left;
   padding: 10px;
   margin: 40px 0;
+}
+.functions-title:hover{
+  cursor: pointer;
 }
 .functions-list__element-title{
   font-size: 1.3em;
